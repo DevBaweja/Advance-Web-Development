@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+
+    <!--
+        inline - does not start on new line and cover only as much space needed
+                 and we cannot set height/width also block level properties like margin,padding
+        block - start on new line and take full width but we can also set width/height
+                and  we can also apply block level properties like margin,padding
+
+        inline-block - does not start on new line we can also set width/height
+                and  we can also apply block level properties like margin,padding
+    -->
+    <!--
+    .d-{value}
+
+    none
+    inline
+    inline-block
+    block
+    table
+    table-cell
+    table-row
+    flex
+    inline-flex
+
+
+    d-print-{value} while printing 
+    Screen Only (Hide on print only)
+    -->
+    <div class="container mb-5">
+        <div class="d-lg-none">hide on screens wider than lg</div>
+        <div class="d-none d-lg-block">hide on screens smaller than lg</div>
+
+
+        <div class="d-print-none">Screen Only (Hide on print only)</div>
+        <div class="d-none d-print-block">Print Only (Hide on screen only)</div>
+        <div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+    </div>
+
+    <div class="container">
+        <div class="d-table">
+            <div class="d-table-row">
+                <div class="d-table-cell"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro animi veniam asperiores! </div>
+                <div class="d-table-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus deserunt maiores?</div>
+                <div class="d-table-cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius obcaecati molestiae temporibus?</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Also with breakpoints-->
+</body>
+
+</html>

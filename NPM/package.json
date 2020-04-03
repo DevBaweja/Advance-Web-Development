@@ -1,0 +1,23 @@
+{
+  "name": "npmbasic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "live": "live-server index.html"
+  },
+  "keywords": [],
+  "author": "Dev Baweja",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "live-server": "^1.2.1",
+    "nodemon": "^1.19.4"
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 250px;
+  width: 250px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.loader span {
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+
+.loader span:nth-child(1) {
+  background-color: #00485f;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.loader span:nth-child(2) {
+  background-color: #00deea;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.loader span:nth-child(3) {
+  background-color: #00deea;
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.loader span:nth-child(4) {
+  background-color: #00485f;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  20% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  40% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  60% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  80% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  20% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  40% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  60% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  80% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+/*# sourceMappingURL=PreloaderWindows.css.map */
+</style>
+</head>
+<body>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

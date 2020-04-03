@@ -1,0 +1,81 @@
+/* Margin and Padding Utilities */
+$spaceamount : (1, 2, 3, 4, 5);
+
+@each $space in $spaceamount {
+
+    // All around margin
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+
+    // Vertical Margin
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    // Horizontal Margin
+    .mx-#{$space} {
+        margin: 0 #{$space}rem;
+    }
+
+    // Margin Top 
+    .mt-#{$space} {
+        margin-top: #{$space}rem;
+    }
+
+    // Margin Bottom
+    .mb-#{$space} {
+        margin-bottom: #{$space}rem;
+    }
+
+    // All around Padding
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+
+    // Vertical Padding
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+
+    // Horizontal Padding
+    .px-#{$space} {
+        padding: 0 #{$space}rem;
+    }
+
+    // Padding Top 
+    .pt-#{$space} {
+        padding-top: #{$space}rem;
+    }
+
+    // Padding Bottom
+    .pb-#{$space} {
+        padding-bottom: #{$space}rem;
+    }
+
+}
+
+/* Grid */
+.grid {
+    @include grid;
+}
+
+/* Flex */
+.flex{
+   @include flex;
+}
+
+/* Flex Center */
+.flex-c{
+   @include flex-c;
+}
+
+/* Absolute Center */
+.ab-c{
+    @include absCenter;
+}
+
+/* Removing Element */
+.d-none{
+    @include d-none;
+}

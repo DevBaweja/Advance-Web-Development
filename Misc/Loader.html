@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 20px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #000;
+  -webkit-animation: animate .7s infinite alternate;
+          animation: animate .7s infinite alternate;
+}
+
+ul li:nth-child(1) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+ul li:nth-child(2) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+ul li:nth-child(3) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+ul li:nth-child(4) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+ul li:nth-child(5) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+ul li:nth-child(6) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  75% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform: scaleY(3);
+            transform: scaleY(3);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  75% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform: scaleY(3);
+            transform: scaleY(3);
+  }
+}
+/*# sourceMappingURL=Loader.css.map */
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

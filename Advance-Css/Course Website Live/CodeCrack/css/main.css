@@ -1,0 +1,264 @@
+/*RESET CSS BEGIN*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/*RESET CSS END*/
+
+/*HELPER CLASS BEGIN*/
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0 0 20px 0;
+}
+
+ul li,
+ol li {
+  margin-bottom: 10px;
+}
+
+/*HELPER CLASS END*/
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/* Header */
+
+header {
+  background-color: red;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: green; 
+    transform: translateY(-100%);
+    transition: all 1s; 
+}
+
+.logo img{
+    max-width: 100px;
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  background-color: black;
+  margin: 0 auto;
+  position: relative;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 0;
+}
+
+.menu li a{
+    font-size: 17px;
+    line-height: 22px;
+    text-decoration: none;
+    color: white;
+    cursor: cell;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    padding-bottom: 3px;
+}
+
+.menu li a:hover{
+    border-color: #fff;
+}
+
+.scroll .sticky{
+    transform: translateY(0);
+}
+
+
+.wrapper{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#scene .name,.title{
+    text-align: center;
+    font-size: 40px;
+    color:red;
+}
+#scene .btn{
+    margin-top: 150px;
+}

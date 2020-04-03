@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #234652;
+  background-image: url(Image/star.png);
+  background-size: contain;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.moon {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.moon::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -15px;
+  right: -15px;
+  background-color: #234652;
+  border-radius: 50%;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 400px;
+  top: 0;
+  left: -325px;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: -2;
+}
+
+.cloud {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50px;
+  top: -100px;
+  left: -300px;
+}
+
+.cloud span {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: block;
+}
+
+.cloud span:nth-child(1) {
+  top: -50px;
+  left: 30px;
+}
+
+.cloud span:nth-child(2) {
+  top: -30px;
+  left: 140px;
+}
+
+.cloud span:nth-child(3) {
+  top: -80px;
+  left: 80px;
+}
+
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: -305px;
+  width: 500px;
+  height: 240px;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: -2;
+}
+
+.cloud-2 {
+  top: 150px;
+  left: 200px;
+}
+
+h2 {
+  font-size: 7em;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 150px;
+  font-family: 'Satisfy', cursive;
+}
+/*# sourceMappingURL=Eid.css.map */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Eid Mubarak</h2>
+        <div class="center">
+            <div class="moon"></div>
+            <div class="cloud">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="cloud cloud-2">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

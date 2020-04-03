@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: #bf1f26;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.center span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  color: #fff;
+}
+/*# sourceMappingURL=AnimatedTyping.css.map */
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <span class="type"> </span>
+            <script type="text/javascript" src="Js/typed.js"></script>
+            
+            <script type="text/javascript">
+                var typed = new Typed(".type", {
+                    strings: [
+                        "Hello ! ",
+                        "My Name is Dev Baweja",
+                        "Aspiring to become full stack developer",
+                        "Check out my Codepen & Github account"],
+                    smartBackspace: true, // Default value  
+                    typeSpeed: 50,
+                    backSpeed: 50,
+                    loop: true
+                });
+            </script>
+    </div>
+</body>
+
+</html>

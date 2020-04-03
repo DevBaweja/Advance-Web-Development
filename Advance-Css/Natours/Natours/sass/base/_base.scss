@@ -1,0 +1,59 @@
+
+*,
+*::after,
+*::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+   /* 
+   box-sizing: border-box; 
+   we can do box-sizing in body but as box-sizing is not inherited 
+   so we force it to inherit to every element by *
+   */
+   
+}
+html{
+    /* 
+        default is 16px 
+        here we are using in % so that
+        if someone changes the default font-size
+    */
+ 
+
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+    // always put larger one than first
+    // put smallest media query in the end
+
+    @include respond(tab-land)
+    {
+        font-size: 56.25%; // 1rem = 9px;  9px/16px = 56.25% 
+    }
+    @include respond(tab-port)
+    {
+        font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+    }
+ 
+    @include respond(big-desktop)
+    {
+        font-size: 75%; // 1rem = 12px; 12px/16px = 75%
+    }
+ 
+
+}
+
+body{
+    box-sizing: border-box;
+    padding: 3rem; 
+
+    @include respond(tab-port)
+    {
+        padding: 0;
+    }
+
+}
+
+::selection{
+    background-color: $color-primary;
+    color: $color-white;   
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+  border: 8px solid #262626;
+  border-radius: 50%;
+  border-bottom: 8px solid transparent;
+}
+
+span:nth-child(1) {
+  height: 50px;
+  width: 50px;
+  -webkit-animation: animatemain 1s linear infinite;
+          animation: animatemain 1s linear infinite;
+}
+
+span:nth-child(2) {
+  height: 100px;
+  width: 100px;
+  -webkit-animation: animateother 2s linear infinite;
+          animation: animateother 2s linear infinite;
+}
+
+span:nth-child(3) {
+  height: 150px;
+  width: 150px;
+  -webkit-animation: animatemain 3s linear infinite;
+          animation: animatemain 3s linear infinite;
+}
+
+@-webkit-keyframes animatemain {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes animatemain {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animateother {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+            transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes animateother {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+            transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+/*# sourceMappingURL=Preloader.css.map */</style>
+</head>
+<body>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

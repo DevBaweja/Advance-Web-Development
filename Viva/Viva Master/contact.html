@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="shortcut icon" href="images/viva_original.png" />
+    <link rel='stylesheet' href='css/evilLoader.css' type='text/css' media='all' />
+    <title>Contact Us</title>
+    <style media="screen">
+
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        width: 100%;
+        height: 100vh;
+        user-select: none;
+        font-size: 25px;
+      }
+        .forcontact{
+        width: 100%;
+          min-height:100vh;
+          background: linear-gradient(to right, #000000 , #112b28);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        color: white;
+        }
+        .forcontact>h1{
+        width: 100%;
+        font-size: 40px;
+        margin: 50px;
+        }
+        .forcontact>div>p{
+        font-size: 17px;
+        }
+            .forcontact>div{
+            width: 40%;
+            }
+            .forcontact>div:first-child{
+            width: 100%;
+            }
+            .forcontact>div>img{
+            height: 30px;
+            width: 30px;
+            position: relative;
+            top: 20px;
+            right: 20px;
+            }
+            .forcontact>div>h1{
+            font-size: 25px;
+            }
+            .phone>div,.add>div{
+              padding: 20px;
+            }
+            @media screen and (max-width:700px) {
+            .forcontact>div{
+              width: 80%;
+              padding-top: 20px;
+            }
+            .phone{
+              flex-wrap: wrap;
+            }
+            .add{
+              flex-wrap: wrap;
+            }
+            .phone>div{
+              width: 100%;
+              flex-wrap: wrap;
+            }
+            .add>div{
+              width: 100%;
+              flex-wrap: wrap;
+            }
+            }
+
+    </style>
+  </head>
+  <body onload="load()">
+
+
+
+  <!--################### LODER ###############3-->
+
+
+  <div class="adf" id="loader" style="
+    position: fixed;
+    z-index: 123;user-select: none;
+    height: 100vh;
+    background-color: #111111;
+    top: 0;
+    width: 100%;
+"><div class="circ" style="/* display: none; *//* position: fixed; *//* z-index: 123; *//* height: 100vh; *//* top: 0; *//* width: 100%; */">
+      <div class="load">Stay Vivacious . . . </div>
+      <div class="hands"></div>
+      <div class="body"></div>
+      <div class="head">
+          <div class="eye"></div>
+      </div>
+  </div>
+  </div>
+
+
+
+    <div class="forcontact">
+      <a href="index.html"><img src="images/vivalogo.png" style="width:50px;height:50px;font-size:20px;position:absolute;top:3%;left:3%;cursor:pointer;z-index:2;color:white;"></a>
+    <h1 style="width:100%;font-family: &#39;Libre Baskerville&#39;, serif">Contact Us</h1>
+      <div class="" style="width:70%;">
+        <div>
+        <p style="padding:20px 0;font-family: &#39;Montserrat&#39;, sans-serif;">Email : <b>vivacity2k19@gmail.com</b></p>
+      </div>
+      <div class="phone" style="display: flex;text-align: center;justify-content:center;">
+        <div class="">
+          <p style="padding:20px 0;font-family: &#39;Montserrat&#39;, sans-serif;">Phone:</p>
+        </div>
+        <div class="">
+          <p style="padding:20px 0;font-family: &#39;Montserrat&#39;, sans-serif;"><b>+91-9001757535 <br> Ateet Tiwari</b></p>
+        </div>
+        <div class="">
+          <p style="padding:20px 0;font-family: &#39;Montserrat&#39;, sans-serif;"><b>+91-7006638382 <br> Prabhat Sharma</b></p>
+        </div>
+      </div>
+      <div class="add" style="display: flex;justify-content:center;">
+        <div style="align-self: center;">
+        <address class="" style="width:100%;">
+        Address :<br> <b>Rupa ki Nangal, Post-Sumel, Via-Jamdoli <br> Sumel, Jaipur, Rajasthan 302031<br></b>
+        </address>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14227.637163663185!2d75.9280313!3d26.938090000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dba21e8a1d1c9%3A0x5ab565cce4d44c2b!2sLNMIIT!5e0!3m2!1sen!2sin!4v1547278966133" frameborder="0" style="border:0;width: 300px;margin: 30px auto;height: 300px;" allowfullscreen></iframe>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+
+  <script>
+      var x = document.getElementById("loader");
+      function load() {
+          x.style.display="none";
+      }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+// (),[],{}," ",' ' are frequency used 
+
+// Priting
+echo String
+
+// run cmd
+windows + r and enter cmd
+
+// Termiante previous command
+ctrl+c
+
+// For system information
+systeminfo
+// Version
+ver
+
+// Check volume
+vol 
+// Change volume
+Volume_Name:
+
+// Know date
+date /t
+// Change date
+date
+// Know time
+time /t
+// Change time
+time
+
+
+// Show all files and sub-directory
+dir
+dir *
+
+// Show all the sub-directory n-level
+dir /S
+// set level
+// Finding all sub-directory n-level containing character
+dir /S *character*
+
+
+// in sql % is used
+
+// Specific Extension
+dir *.Extension_Name [*.Extension_Name]
+
+// Finding anything with Specific Character
+dir *character*
+
+
+// Change directory
+cd Directory_Name
+
+// Previuos directory
+cd ..
+
+// Make directory
+mkdir Directory_Name [Directory_Name]
+// mkdir with multiple directory have space
+mkdir "Directory_Name" [Directory_Name]
+// dont use ' ' brackets 
+
+
+// Delete Files don't delete sub-directory
+del Directory_Name [Directory_Name]
+
+// Remove directory if it is empty
+rmdir Directory_Name
+
+
+// Make file
+type nul > Filename
+
+// Rename file use ren or rename
+rename Previuos_File_Name Current_File_Name
+rename Previuos_Directory_Name Current_Directory_Name
+// With rename you can change extensions
+
+// Clear Screen 
+cls
+//clc in matlab
+// clear in matlab is used to undeclare every variable
+
+// Exit Command Line
+exit
+
+// python cmd exit()
+// node cmd .exit
+
+// Version Control
+java --version,-version
+javac --version,-version
+node --version -v,--v
+npm --version ,-v,--v
+python --version
+gcc --verison,-v
+
+// Just use --version it will work every time

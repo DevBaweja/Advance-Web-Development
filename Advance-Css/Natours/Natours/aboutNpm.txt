@@ -1,0 +1,18 @@
+npm is used to get nodejs packages
+
+npm init
+to create new package.json file
+
+npm install package-name Dependencies
+npm install node-sass --save-dev
+will install this packages in node-modules file
+
+npm install 
+if you already have package.json file 
+it will install all those packages you need
+
+npm uninstall package-name Dependencies
+will uninstall it from your node-modules packages
+
+npm run compile:sass
+to compile sass file ny using json file

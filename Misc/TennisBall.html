@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: #0058a5;
+}
+
+.center {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 400px;
+  width: 400px;
+}
+
+.center .ball {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 250px;
+  width: 250px;
+  background-color: #c9f364;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-animation: animate 1.5s linear infinite ;
+          animation: animate 1.5s linear infinite ;
+          animation-timing-function: ease-in-out;
+  z-index: 2;
+}
+
+.center .ball::before, .center .ball::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 6px solid transparent;
+  background-color: transparent;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.center .ball::before {
+  -webkit-transform: translate(-110%, -50%);
+          transform: translate(-110%, -50%);
+  border-color: #fff;
+}
+
+.center .ball::after {
+  -webkit-transform: translate(10%, -50%);
+          transform: translate(10%, -50%);
+  border-color: #fff;
+}
+
+.center .shadow {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: 175px;
+  height: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-animation: shadow 1.5s linear infinite;
+          animation: shadow 1.5s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-200px) rotate(0deg);
+            transform: translateX(-50%) translateY(-200px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(0) rotate(180deg);
+            transform: translateX(-50%) translateY(0) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-200px) rotate(360deg);
+            transform: translateX(-50%) translateY(-200px) rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-200px) rotate(0deg);
+            transform: translateX(-50%) translateY(-200px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(0) rotate(180deg);
+            transform: translateX(-50%) translateY(0) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-200px) rotate(360deg);
+            transform: translateX(-50%) translateY(-200px) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(0.5);
+            transform: translateX(-50%) scale(0.5);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(0.5);
+            transform: translateX(-50%) scale(0.5);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+  }
+}
+/*# sourceMappingURL=TennisBall.css.map */
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="ball">
+
+        </div>
+        <div class="shadow">
+
+        </div>
+    </div>
+</body>
+</html>

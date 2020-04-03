@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: #262626;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 350px;
+  width: 350px;
+  -webkit-box-shadow: 45px 45px 45px rgba(0, 0, 0, 0.8);
+          box-shadow: 45px 45px 45px rgba(0, 0, 0, 0.8);
+  background-color: #262626;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.center::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.heart {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+          transform: translateY(20px) rotate(-45deg);
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border-top: 10px solid #000;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50%;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 50%;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+  25% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+  30% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1.4);
+            transform: translateY(20px) rotate(-45deg) scale(1.4);
+  }
+  50% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1.2);
+            transform: translateY(20px) rotate(-45deg) scale(1.2);
+  }
+  70% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1.4);
+            transform: translateY(20px) rotate(-45deg) scale(1.4);
+  }
+  90% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+  25% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+  30% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1.4);
+            transform: translateY(20px) rotate(-45deg) scale(1.4);
+  }
+  50% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1.2);
+            transform: translateY(20px) rotate(-45deg) scale(1.2);
+  }
+  70% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1.4);
+            transform: translateY(20px) rotate(-45deg) scale(1.4);
+  }
+  90% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(20px) rotate(-45deg) scale(1);
+            transform: translateY(20px) rotate(-45deg) scale(1);
+  }
+}
+/*# sourceMappingURL=HeartEffect.css.map */
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="heart">
+
+        </div>
+    </div>
+</body>
+</html>

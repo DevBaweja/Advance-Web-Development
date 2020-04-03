@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcff8a;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 2000;
+}
+
+ul li {
+  float: left;
+  list-style: none;
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 10em;
+  position: relative;
+  z-index: 1000;
+}
+
+ul li::before, ul li::after {
+  content: attr(data-title);
+  color: #262626;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+}
+
+ul li:nth-child(odd)::before {
+  -webkit-clip-path: polygon(55% 0, 0 0, 0 100%, 35% 100%);
+          clip-path: polygon(55% 0, 0 0, 0 100%, 35% 100%);
+  top: -7px;
+  left: -2px;
+}
+
+ul li:nth-child(odd)::after {
+  -webkit-clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+          clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+  top: 2px;
+  left: 2px;
+}
+
+ul li:nth-child(even)::before {
+  -webkit-clip-path: polygon(25% 0, 0 0, 0 100%, 75% 100%);
+          clip-path: polygon(25% 0, 0 0, 0 100%, 75% 100%);
+  top: 10px;
+  left: -2px;
+}
+
+ul li:nth-child(even)::after {
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+          clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+  top: 2px;
+  left: 2px;
+}
+
+ul li:nth-child(even) {
+  -webkit-animation: animateeven 3s linear infinite;
+          animation: animateeven 3s linear infinite;
+}
+
+ul li:nth-child(odd) {
+  -webkit-animation: animateodd 3s linear infinite;
+          animation: animateodd 3s linear infinite;
+}
+
+@-webkit-keyframes animateeven {
+  0% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+@keyframes animateeven {
+  0% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+@-webkit-keyframes animateodd {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+@keyframes animateodd {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+/*# sourceMappingURL=FractureText.css.map */
+    </style>
+</head>
+<body>
+    <ul>
+        <li data-title="F">F</li>
+        <li data-title="R">R</li>
+        <li data-title="A">A</li>
+        <li data-title="C">C</li>
+        <li data-title="T">T</li>
+        <li data-title="U">U</li>
+        <li data-title="R">R</li>
+        <li data-title="E">E</li>
+        <li data-title="D">D</li>
+    </ul>
+</body>
+</html>

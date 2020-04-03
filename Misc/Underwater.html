@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <style>body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2305c7), to(#00c4ff));
+  background-image: linear-gradient(to top, #2305c7, #00c4ff);
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+}
+
+#particles .fish {
+  position: absolute;
+}
+
+#particles .fish--1 {
+  top: 30%;
+  height: 200px;
+  -webkit-animation: animate-left 10s linear infinite;
+          animation: animate-left 10s linear infinite;
+  opacity: .75;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+#particles .fish--2 {
+  top: 50%;
+  height: 100px;
+  -webkit-animation: animate-left 25s linear infinite;
+          animation: animate-left 25s linear infinite;
+  opacity: .2;
+}
+
+#particles .fish--3 {
+  top: 70%;
+  height: 150px;
+  -webkit-animation: animate-right 20s linear infinite;
+          animation: animate-right 20s linear infinite;
+  opacity: .2;
+}
+
+#particles .fish--4 {
+  top: 10%;
+  height: 175px;
+  -webkit-animation: animate-left 35s linear infinite;
+          animation: animate-left 35s linear infinite;
+  opacity: .75;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+@-webkit-keyframes animate-left {
+  0% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: -25%;
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+  }
+  75% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: 125%;
+  }
+}
+
+@keyframes animate-left {
+  0% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: -25%;
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+  }
+  75% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: 125%;
+  }
+}
+
+@-webkit-keyframes animate-right {
+  0% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: 125%;
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+  }
+  75% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: -25%;
+  }
+}
+
+@keyframes animate-right {
+  0% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: 125%;
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
+  }
+  75% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    left: -25%;
+  }
+}
+/*# sourceMappingURL=Underwater.css.map */</style>
+</head>
+
+<body>
+    <section>
+        <div id="particles">
+            <img src="Image/fish.png" alt="" class="fish fish--1">
+            <img src="Image/fish1.png" alt="" class="fish fish--2">
+            <img src="Image/fish2.png" alt="" class="fish fish--3">
+            <img src="Image/fish3.png" alt="" class="fish fish--4">
+
+        </div>
+    </section>
+    <script type="text/javascript" src="Js/particles.js"></script>
+    <script type="text/javascript" src="Js/app.js"></script>
+</body>
+
+</html>

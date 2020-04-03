@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #262626;
+    }
+
+    .stroke {
+      width: 400px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .stroke::after,
+    .stroke::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #262626;
+      -webkit-animation: animate 5s linear infinite;
+      animation: animate 5s linear infinite;
+      -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    .stroke::after {
+      content: "\f040";
+      top: -45px;
+      font-family: fontAwesome;
+      color: #a9ff08;
+      font-size: 50px;
+      -webkit-transform: translateX(2px);
+      transform: translateX(2px);
+    }
+
+    @-webkit-keyframes animate {
+      0% {
+        left: 0%;
+      }
+
+      50% {
+        left: 100%;
+      }
+
+      100% {
+        left: 0%;
+      }
+    }
+
+    @keyframes animate {
+      0% {
+        left: 0%;
+      }
+
+      50% {
+        left: 100%;
+      }
+
+      100% {
+        left: 0%;
+      }
+    }
+
+    /*# sourceMappingURL=PencilStroke.css.map */
+  </style>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="stroke">
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+// Basic commands and help
+npm 
+npm help 
+list all the commands
+Flag -l for long description
+npm <command> -h  quick help on <command>
+
+// Init 
+npm init
+
+It is used to get package.json file
+Default answers are in brackets
+
+package name:(folder-name)
+version:(1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+
+If you write npm init again it will modify basic information in package.json file
+
+
+npm init --yes 
+npm init -y
+Accepts all Default 
+
+// Config
+npm config -h
+
+npm config set <key> <value>
+npm config get [<key>]
+npm config delete <key>
+npm config list [--json]
+npm config edit
+npm set <key> <value>
+npm get [<key>]
+
+npm config set init-author-name "Dev Baweja"
+npm config set init-license "MIT"
+npm config set init-description "Sample Code"
+npm config get init-author-name
+npm config delete init-description
+
+set,get,delete,list,edit
+config is unnecessary for set,get
+config is necessary for delete,list,edit
+
+npm config ls
+Here list can also be used in place of ls 
+Getting Default values
+Flag -l can be used for long list
+
+npm config edit 
+It will open .npmrc file in which basic config is present
+
+Flag have - if it is in short version and -- if it is in long version
+
+// Install
+npm install -h
+
+
+npm install (with no args, in package dir)
+npm install [<@scope>/]<pkg>
+npm install [<@scope>/]<pkg>@<tag>
+npm install [<@scope>/]<pkg>@<version>
+npm install [<@scope>/]<pkg>@<version range>
+npm install <folder>
+npm install <tarball file>
+npm install <tarball url>
+npm install <git:// url>
+npm install <github username>/<github project>
+
+aliases: i, isntall, add
+common options: [--save-prod|--save-dev|--save-optional] [--save-exact] [--no-save]
+
+npm install 
+It will search for package.json file and install appropriate dependencies and version 
+It will install all dependencies regular and development dependencies
+
+npm install --production
+This flag is used to add only regular dependencies
+It will not add dev dependencies
+
+npm install lodash --save
+npm install gulp --save-dev
+npm install gulp-sass --save-dev
+
+Multiple dependencies can be installed also having same flag
+npm install gulp gulp-sass --save-dev
+
+Use i,isntall,add all are same
+
+Installing already installed dependencies 
+It will update that package to latest version
+Also --save-dev and --save-prod work opposite
+They can be used to toggle between production and development phase
+
+// Update 
+
+npm install lodash@4.17.3
+npm update [-g] [<pkg>...]
+
+aliases: up, upgrade, udpate
+npm update lodash
+
+// Dependencies
+--save for dependencies
+--save-dev for development dependencies 
+--save-prod for production dependencies
+--no-save prevent saving to dependencies 
+
+--save-dev -D
+--save-prod -P
+--save-optional -O
+--no-save
+
+
+--save-dev is for development only ie it will be unused while running application 
+--save-prod is for production only ie it will be unused while developing application
+
+node-module folder get huge as if you install some package it will then install all the 
+dependencies that is used by that package in its package.json file
+
+
+
+// Uninstall
+npm uninstall [<@scope>/]<pkg>[@<version>]... [--save-prod|--save-dev|--save-optional] [--no-save]
+
+aliases: un, unlink, remove, rm, r
+
+npm uninstall lodash --save
+Use un,unlink,remove,rm,r all are same
+
+Multiple dependencies can be uninstalled also having same flag
+npm uninstall gulp gulp-sass --save-dev
+
+Invalid flags will give no error rather it will take Default parameters
+
+// Version
+8.2.6
+Major Verion . Minor Version . Patch (Bug fixes)
+
+Major Verion usually break api 
+Minor Verion usually add features
+Patch Verion usually fixes Bug
+
+"dependencies": {
+    "lodash": "~4.17.15",
+    "lodash": "^4.17.15",
+    "lodash": "4.17.15",
+    "lodash": "*"
+}
+
+~ is for Latest Patch Verion
+^ is for Latest Minor Version(Default)
+No symbol means Exact Version
+* is for Latest Verion
+
+^ is Default as Major Verion will break api
+
+// Global 
+-g is used to install globally on machine
+npm install -g nodemon
+
+npm root -g
+will tell us node-module of globally installed packages
+
+nodemon 
+live-server
+now it is globally setup you can run it from anywhere into your project file
+
+
+npm cache clear --force
+npm list -g --depth=0
+It will list all the globally installed
+
+// Deep Concepts
+
+npm install <pkg>
+It will install this packages and then execute npm install in that package
+ie it will then install all dependencies of that package also
+then is it execute recursively untill end
+Maybe at further level it uses --save-prod 
+
+npm list 
+List all the dependencies installed in local project level
+npm list -g
+Global level
+
+Both uses recursive approach
+
+npm list -g --depth=0
+npm list -g --depth=0
+
+// To upgrade npm 
+npm install npm@latest -g
+
+// Scripts
+Scripts are written in scripts object in package.json file
+they are executed by 
+npm run server
+npm run live
+
+npm run-script <command> [-- <args>...]
+
+aliases: run, rum, urn
+
+npm run start 
+start can be used without 
+

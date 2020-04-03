@@ -1,0 +1,117 @@
+.loading {
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+
+    height: 0vh;
+    width: 0;
+    z-index: 9999999999;
+    animation: animate_size 3s, animate_end 1s 3s;
+
+    ol {
+        position: fixed;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0px;
+        width: 0px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        animation: animate_hidden 3.4s;
+    }
+
+    ol li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #000;
+        visibility: hidden;
+        animation: animate .7s alternate;
+        animation-iteration-count: 4;
+    }
+
+    ol li:nth-child(1) {
+        animation-delay: .1s;
+    }
+
+    ol li:nth-child(2) {
+        animation-delay: .2s;
+    }
+
+    ol li:nth-child(3) {
+        animation-delay: .3s;
+    }
+
+    ol li:nth-child(4) {
+        animation-delay: .4s;
+    }
+
+    ol li:nth-child(5) {
+        animation-delay: .5s;
+    }
+
+    ol li:nth-child(6) {
+        animation-delay: .6s;
+    }
+}
+
+@keyframes animate {
+    0% {
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    75% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(3);
+    }
+}
+
+@keyframes animate_end {
+    0% {
+        height: 100vh;
+        width: 100%;
+    }
+    99%{
+        width: 100%;
+    }
+    100% {
+        height: 0vh;
+        width: 0;
+    }
+}
+
+@keyframes animate_size {
+    0% {
+        height: 100vh;
+        width: 100%;
+    }
+    100% {
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+@keyframes animate_hidden {
+    0% {
+        height: 20px;
+        width: 100px;
+    }
+
+    100% {
+        height: 20px;
+        width: 100px;
+    }
+}

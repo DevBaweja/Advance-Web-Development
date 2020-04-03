@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .cbox {
+            border: 3px solid;
+        }
+
+        .arow {
+            border: 10px solid yellowgreen;
+        }
+
+        .adiv,
+        .bdiv,
+        .cdiv,
+        .ddiv,
+        .ediv,
+        .fdiv{
+            height: 60px;
+        }
+        .adiv {
+            background-color: red;
+        }
+
+        .bdiv {
+            background-color: gray;
+        }
+
+        .cdiv {
+            background-color: chocolate;
+        }
+
+        .ddiv {
+            background-color: green;
+        }
+
+        .ediv {
+            background-color: fuchsia;
+        }
+
+        .fdiv {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bootstrap is mobile first hence mostly uses min-width concept -->
+    <!--
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }
+-->
+
+    <!--
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+-->
+
+    <!--
+    sm - 576px
+    md - 768px
+    lg - 992px
+    xl - 1200px
+-->
+
+    <div class="container cbox">
+
+        <h1 class="text-center"> Initially it is Large In another it will form accordingly </h1>
+        <div class="row arow">
+            <div class="col-lg-2 col-md-4 col-sm-6 adiv"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 bdiv"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 cdiv"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 ddiv"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 ediv"></div>
+            <div class="col-lg-2 col-md-4 col-sm-6 fdiv"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

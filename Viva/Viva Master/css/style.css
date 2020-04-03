@@ -1,0 +1,68 @@
+body {
+  background: #fff;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#socialBar {
+  width: 56px;
+  height: 56px;
+  transform: translate(0px,85vh);
+  overflow: hidden;
+  /* padding: 90vh 0 0 0; */
+  float: right;
+  position: relative;
+  background-color: #3f51b5;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px 4px rgba(63, 81, 181, 0.3), 0px 4px 17px 10px rgba(63, 81, 181, 0.1);
+  transition: width 0.225s ease-out;
+  display: flex;
+}
+#socialBar .fa {
+  color: #fff;
+  padding: 20px;
+}
+#socialBar .fa:not(:first-child) {
+  opacity: 0;
+  transform: translateY(-40%);
+}
+#socialBar .fa.hide {
+  opacity: 1;
+}
+#socialBar.active {
+  width: 300px;
+}
+#socialBar.active .fa {
+  transform: translateY(0);
+}
+#socialBar.active .fa:nth-child(2) {
+  transition: all 0.325s 0.1s ease-out;
+}
+#socialBar.active .fa:nth-child(3) {
+  transition: all 0.325s 0.15s ease-out;
+}
+#socialBar.active .fa:nth-child(4) {
+  transition: all 0.325s 0.2s ease-out;
+}
+#socialBar.active .fa:nth-child(5) {
+  transition: all 0.325s 0.25s ease-out;
+}
+#socialBar.active .fa:not(:first-child) {
+  opacity: 1;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-size: 1em;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active:not(.active) {
+  transform: scale(0.95);
+  box-shadow: none;
+}

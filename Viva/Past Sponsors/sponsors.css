@@ -1,0 +1,13 @@
+.sponsors .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10rem, 1fr))[5];
+      grid-template-columns: repeat(5, minmax(10rem, 1fr));
+  grid-gap: 3rem;
+  background-color: orangered;
+}
+
+.sponsors .container .sponsor {
+  background-color: #fff;
+  height: 200px;
+}

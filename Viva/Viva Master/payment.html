@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+    <link rel='stylesheet' href='css/evilLoader.css' type='text/css' media='all' />
+    <link rel="shortcut icon" href="images/viva_original.png" />
+
+    <title>payment mode</title>
+    <style media="screen">
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      text-align: center;
+      color: white;
+      background: linear-gradient( to bottom, #09203f , #537895);
+
+    }
+    h1{
+      margin: 70px 0 50px 0;
+      font-family: 'Joti One', cursive;
+    }
+    h2{
+      margin: 30px 15% 0 15%;
+      font-family: 'Joti One', cursive;
+    }
+      .platform{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        overflow: hidden;
+        min-height: 500px;
+        font-family: 'Joti One', cursive;
+      }
+      .left{
+        width: 100%;
+        min-width: 300px;
+        margin: 50px 0;
+        align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .left>div{
+        width: 50%;
+        min-width: 300px;
+        align-self: center;
+      }
+      p{
+        font-size: 18px;
+        line-height: 50px;
+        width: 100%;
+      }
+      .right{
+        width: 100%;
+        align-self: center;
+        min-width: 300px;
+      }
+      .right>img{
+        width: 80%;
+        min-width: 200px;
+        max-width: 300px;
+      }
+
+      /* button style */
+      .row1{
+        font-size:20px;
+      }
+      @media screen and (max-width:500px) {
+
+      }
+      @media screen and (max-height:500px) {
+
+      }
+      /* Global Button Styles */
+      a.animated-button:link, a.animated-button:visited {
+      position: relative;
+      display: block;
+      margin: 30px auto 0;
+      padding: 14px 15px;
+      color: #fff;
+      font-size:20px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      letter-spacing: .08em;
+      border-radius: 0;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+      }
+      a.animated-button:link:after, a.animated-button:visited:after {
+      content: "";
+      position: absolute;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      width: 150%;
+      z-index: -1;
+      -webkit-transition: all 0.75s ease 0s;
+      -moz-transition: all 0.75s ease 0s;
+      -o-transition: all 0.75s ease 0s;
+      transition: all 0.75s ease 0s;
+      }
+      a.animated-button:link:hover, a.animated-button:visited:hover {
+      color: #FFF;
+      text-shadow: none;
+      }
+      a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+      height: 450%;
+      }
+      a.animated-button:link, a.animated-button:visited {
+      position: relative;
+      display: block;
+      margin: 30px auto 0;
+      padding: 14px 15px;
+      color: #fff;
+      font-size:14px;
+      border-radius: 0;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      letter-spacing: .08em;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+      border: 1px white solid;
+      }
+
+      /* Victoria Buttons */
+
+      a.animated-button.victoria-one:after {
+      background: #D24D57;
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+      transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+      }
+      /* Sandy Buttons */
+
+      a.animated-button.sandy-one {
+      border: 2px solid #AEA8D3;
+      color: #FFF;
+      }
+      a.animated-button.sandy-one:after {
+      border: 3px solid #AEA8D3;
+      opacity: 0;
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+
+      }
+      a.animated-button.sandy-one:hover:after {
+      height: 120% !important;
+      opacity: 1;
+      color: #FFF;
+      }
+
+    </style>
+  </head>
+  <body onload="load()">
+
+
+  <!--################### LODER ###############3-->
+
+
+  <div class="adf" id="loader" style="
+    position: fixed;
+    z-index: 123;
+    height: 100vh;
+    background-color: #111111;
+    top: 0;
+    width: 100%;
+"><div class="circ" style="/* display: none; *//* position: fixed; *//* z-index: 123; *//* height: 100vh; *//* top: 0; *//* width: 100%; */">
+    <div class="load">Stay Vivacious . . . </div>
+    <div class="hands"></div>
+    <div class="body"></div>
+    <div class="head">
+      <div class="eye"></div>
+    </div>
+  </div>
+  </div>
+
+
+    <a href="index.html"><img src="images/viva_original.png" style="user-select: none;width:50px;font-size:20px;position:absolute;top:3%;left:3%;cursor:pointer;z-index:2;color:white;"></a>
+    <!--<a href="paymentflicker.html"><h4 style="font-family:'Joti One', cursive;  font-size:15px;position:absolute;top:3%;right:3%;cursor:pointer;z-index:2;color:white;">Payment for Flicker</br>Film-Making Contest</h4></a>-->
+
+    <h1>Fee Payment Mode</h1>
+    <h2>Thanks so much for registering for Vivacity 2019!<br> Our team will contact you soon.</h2>
+    <div class="platform">
+      <div class="left">
+        <p>There are two options for FEE PAYMENT</p>
+        <div>
+        <p>ONLINE </p>
+        <div class="row1">
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="http://m.p-y.tm/lnmiit_vnweb" style="font-family: &#39;Indie Flower&#39;, cursive;font-size:15px;width: 230px;" target="_blank" class="btn btn-sm animated-button victoria-one">Pay Now</a> </div>
+        </div>
+        <p>You can pay online before 30th Jan</p>
+      </div>
+      <div>
+        <p>OFFLINE</p><p>Pay in cash at our Vivacity's Registration Desks.</p>
+      </div>
+      </div>
+      <div class="right">
+        <img src="images/paytm.png" alt="">
+        <p>QR Code For Paytm</p>
+      </div>
+    </div>
+  <script>
+      var x = document.getElementById("loader");
+      function load() {
+          x.style.display="none";
+      }
+  </script>
+  </body>
+</html>

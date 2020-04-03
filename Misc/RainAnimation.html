@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>body {
+  margin: 0;
+  padding: 0;
+  background-size: 100vw 100vh;
+  background-image: url(Image/image202.jpg);
+  background-repeat: no-repeat;
+}
+
+.rain {
+  height: 100vh;
+  background-image: url(Image/rain.png);
+  -webkit-animation: rain .3s linear infinite;
+          animation: rain .3s linear infinite;
+}
+
+.rain::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-animation: lighting 2s linear infinite;
+          animation: lighting 2s linear infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+@-webkit-keyframes lighting {
+  0% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  23% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  63% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes lighting {
+  0% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  23% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  63% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=RainAnimation.css.map */</style>
+</head>
+<body>
+    <div class="rain">
+        
+    </div>
+</body>
+</html>

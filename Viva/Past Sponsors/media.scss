@@ -1,0 +1,134 @@
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #a52775f8, #8b0a5ae1);
+}
+
+.media {
+
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+    &-title{
+        margin: 0;
+        padding: 0;
+        font-family: Poppins;
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        font-size: 75px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        font-weight: bolder;
+        line-height: 1.5;
+        letter-spacing: 2.7px;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .container {
+        position: absolute;
+        top: 57.5%;
+        left: 52.75%;
+        height: 65%;
+        width: 92.5%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        //overflow-x:scroll; 
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        /* width */
+        &::-webkit-scrollbar {
+            height: 2.5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #fff;
+        }
+
+        .grid {
+            height: 50%;
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+            justify-content: flex-start;
+            grid-gap: 30px;
+
+            &:first-child {
+                padding: 15px 0px 10px 0px;
+            }
+
+            &:last-child {
+                padding: 10px 0px 15px 0px;
+            }
+
+            // ::-webkit-scrollbar the scrollbar.
+            // ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+            // ::-webkit-scrollbar-thumb the draggable scrolling handle.
+            // ::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+            // ::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+            // ::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+            // ::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements.
+        }
+
+        .grid-upper {
+
+
+            .grid-item {
+                height: 100%;
+                width: 100%;
+                background-color: #fff;
+
+                &:nth-child(3n+1) {
+                    width: 350px;
+                }
+
+                &:nth-child(3n+2) {
+                    width: 275px;
+                }
+
+                &:nth-child(3n) {
+                    width: 375px;
+                }
+            }
+        }
+
+        .grid-lower {
+
+
+            .grid-item {
+                height: 100%;
+                width: 100%;
+                background-color: #fff;
+
+                &:nth-child(3n+1) {
+                    width: 250px;
+                }
+
+                &:nth-child(3n+2) {
+                    width: 400px;
+                }
+
+                &:nth-child(3n) {
+                    width: 325px;
+                }
+            }
+        }
+    }
+
+}

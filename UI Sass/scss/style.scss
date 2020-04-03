@@ -1,0 +1,201 @@
+@import "config";
+@import "utilities";
+@import "form";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// html {
+//     font-size: 62.5%;
+// }
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+// Navbar
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid $primary-color;
+    opacity: 0.9;
+
+    ul {
+        display: flex;
+    }
+
+    a {
+
+        &:link,
+        &:visited {
+            color: #fff;
+            padding: .45rem;
+            margin: 0 .25rem;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+// Landing
+
+.landing {
+    position: relative;
+    background-image: url(../img/showcase.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+
+    &-inner {
+        color: #fff;
+        height: 100%;
+        width: 80%;
+        // to center conatiner
+        margin: 0 auto;
+        // item of container
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+// Profiles Page
+
+.profile {
+
+    padding: 1rem;
+    line-height: 1.8;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+
+// Profile Page
+
+.profile {
+
+    &-grid {
+        display: grid;
+
+        grid-template-areas:
+            'top top'
+            'about about'
+            'exp edu'
+            'github github';
+        grid-gap: 1rem;
+    }
+
+    &-top {
+        grid-area: top;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+            width: 250px;
+        }
+
+        .icons a {
+            color: #fff;
+            margin: 0 .3rem;
+            transition: all .2s;
+
+            &:hover {
+                color: $dark-color;
+            }
+        }
+    }
+
+    &-about {
+        grid-area: about;
+        text-align: center;
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-exp {
+        grid-area: exp;
+    }
+
+    &-edu {
+        grid-area: edu;
+    }
+
+    &-exp,
+    &-edu {
+
+        &>div {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px #ccc dotted;
+            }
+
+            p {
+                margin: .5rem 0;
+            }
+        }
+    }
+
+    &-github {
+        grid-area: github;
+
+        .repo {
+            display: flex;
+
+            &>div:first-child {
+                flex: 7;
+                flex-basis: 70&;
+            }
+            &>div:last-child {
+                flex: 2;
+                flex-basis: 2+0&;
+            }
+        }
+    }
+}

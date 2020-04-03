@@ -1,0 +1,251 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+*/
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+html {
+  /* 
+        default is 16px 
+        here we are using in % so that
+        if someone changes the default font-size
+        it will adjust accordingly
+    */
+  font-size: 62.5%;
+  /* Desktop First */
+  /* Larger media queries are  */ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+
+/* Margin and Padding Utilities */
+.m-1 {
+  margin: 1rem; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.mx-1 {
+  margin: 0 1rem; }
+
+.mt-1 {
+  margin-top: 1rem; }
+
+.mb-1 {
+  margin-bottom: 1rem; }
+
+.p-1 {
+  padding: 1rem; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.px-1 {
+  padding: 0 1rem; }
+
+.pt-1 {
+  padding-top: 1rem; }
+
+.pb-1 {
+  padding-bottom: 1rem; }
+
+.m-2 {
+  margin: 2rem; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.mx-2 {
+  margin: 0 2rem; }
+
+.mt-2 {
+  margin-top: 2rem; }
+
+.mb-2 {
+  margin-bottom: 2rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.px-2 {
+  padding: 0 2rem; }
+
+.pt-2 {
+  padding-top: 2rem; }
+
+.pb-2 {
+  padding-bottom: 2rem; }
+
+.m-3 {
+  margin: 3rem; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.mx-3 {
+  margin: 0 3rem; }
+
+.mt-3 {
+  margin-top: 3rem; }
+
+.mb-3 {
+  margin-bottom: 3rem; }
+
+.p-3 {
+  padding: 3rem; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.px-3 {
+  padding: 0 3rem; }
+
+.pt-3 {
+  padding-top: 3rem; }
+
+.pb-3 {
+  padding-bottom: 3rem; }
+
+.m-4 {
+  margin: 4rem; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.mx-4 {
+  margin: 0 4rem; }
+
+.mt-4 {
+  margin-top: 4rem; }
+
+.mb-4 {
+  margin-bottom: 4rem; }
+
+.p-4 {
+  padding: 4rem; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.px-4 {
+  padding: 0 4rem; }
+
+.pt-4 {
+  padding-top: 4rem; }
+
+.pb-4 {
+  padding-bottom: 4rem; }
+
+.m-5 {
+  margin: 5rem; }
+
+.my-5 {
+  margin: 5rem 0; }
+
+.mx-5 {
+  margin: 0 5rem; }
+
+.mt-5 {
+  margin-top: 5rem; }
+
+.mb-5 {
+  margin-bottom: 5rem; }
+
+.p-5 {
+  padding: 5rem; }
+
+.py-5 {
+  padding: 5rem 0; }
+
+.px-5 {
+  padding: 0 5rem; }
+
+.pt-5 {
+  padding-top: 5rem; }
+
+.pb-5 {
+  padding-bottom: 5rem; }
+
+/* Grid */
+.grid {
+  display: grid; }
+
+/* Flex */
+.flex {
+  display: flex; }
+
+/* Flex Center */
+.flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/* Absolute Center */
+.ab-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+/* Removing Element */
+.d-none {
+  display: none; }

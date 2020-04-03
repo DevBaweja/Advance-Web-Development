@@ -1,0 +1,16 @@
+.sponsors{
+
+    .container{
+        display: grid;
+    
+        grid-template-columns: repeat(5, minmax(10rem, 1fr));
+        grid-gap: 3rem;
+        background-color: orangered;
+
+        .sponsor{
+             background-color: #fff;
+             height: 200px;
+        }
+    }
+
+}
