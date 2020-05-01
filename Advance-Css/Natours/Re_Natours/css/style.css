@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap');
 /*
 COLORS:
 
@@ -6,42 +7,51 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
+/* Basic Reset */
+/* No need of normalize.css */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box; */
+  box-sizing: inherit;
+  /* Force inherit from body */
+}
+
+/* For using rem units */
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%;
+  /* we need 1rem = 10px so we se root font size to 10px */
+}
+
+/* Properties related to font are usually inherited */
+body {
+  font-family: "Lato", sans-serif;
+  /* font-size: 'Roboto Mono', monospace; */
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7; 
+  color: #777;
+  padding: 3rem;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 10px;
-  /* 1rem = 10px */
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-}
-
+/* Header Block */
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom,
-      rgba(126, 213, 111, 0.801),
-      rgba(40, 180, 133, 0.801)),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right, hsla(111, 55%, 64%, 0.8), hsla(160, 64%, 43%, 0.8)), url(../img/hero.jpg);
   background-size: cover;
-  background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  clip-path: polygon(0% 0%, 0% 100%, 100% 75vh, 100% 0%);
+
   position: relative;
 }
 
+/* Header Logo Element*/
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -52,21 +62,32 @@ body {
   height: 3.5rem;
 }
 
+
+/* Header Text Box Element*/
 .header__text-box {
+
   position: absolute;
+  /* These % are of parent */
   top: 40%;
   left: 50%;
+
+  /* These % are of element itself */
   transform: translate(-50%, -50%);
+
   text-align: center;
 }
 
+/* Heading Block*/
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  /* Shaky animation */
   backface-visibility: hidden;
+
   margin-bottom: 6rem;
 }
 
+/* Heading Main Modifiers */
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -74,11 +95,9 @@ body {
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
-  /*animation-delay: 3s;
-  animation-iteration-count: 3;
-  animation-timing-function: ease-in-out;*/
+  animation-timing-function: ease-out;
 }
-
+/* Heading Sub Modifiers */
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -86,105 +105,627 @@ body {
   letter-spacing: 1.75rem;
   animation-name: moveInRight;
   animation-duration: 1s;
-  /*animation-delay: 3s;
-  animation-iteration-count: 3;
-  animation-timing-function: ease-in-out;*/
+  animation-timing-function: ease-out;
 }
 
+/* Buttons Block (:link,:visited) */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+
+  position: relative;
+}
+/* Button Pseudo Classes (:hover,:active)*/
+.btn:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-.1rem);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+/* Button Pseudo Elements(::after) */
+.btn::after {
+  content: '';
+  display: inline-block;
+  /* Treated like child */
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transition: all 0.4s;
+}
+/* Button Pseudo Class(:hover) of Button Pseudo Element(::after)*/
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* Button White Modifier */
+.btn--white {
+  background-color: #fff;
+  color: #777;
+  padding: 1.5rem 4rem;
+}
+
+/* Button White Modifier Pseudo Element(::after)*/
+.btn--white::after {
+  background-color: #fff;
+}
+
+/* Button Animated Modifier */
+.btn--animated {
+  animation-name: moveInBottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+}
+
+
+
+
+/* Animations */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
+    transform: translateX(-10rem)
   }
 
   80% {
-    transform: translate(1rem);
+    transform: translateX(1.0rem);
   }
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    transform: translateX(10rem)
   }
 
   80% {
-    transform: translate(-1rem);
+    transform: translateX(-1.0rem);
   }
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translateX(0);
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  font-size: 1.6rem;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
+    transform: translateY(3rem)
   }
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0);
+  }
+}
+/* 
+
+Comment are readed by dev tools so comment those property that you are unsure about
+and then manipulate it directly from dev tools
+
+background-image : url()
+background-image : linear-gradient(to top,left,bottom,right or their combination,color1,color2)
+
+
+background-size : cover,contain,100% 100% 
+try to fit image
+
+
+background-position : top,left,bottom,right or their combination,center
+percentage,px,rem represting point
+try to fix position
+
+background-repeat: no-repeat,repeat
+
+clip-path : to clip image giving coordinates of polygon
+
+-webkit-anyproperty
+
+Animation of opacity is created mostly
+as opacity : 0 to 1 is scale process
+however visibility : hidden to visible is binary process
+similarly with display : none to block is also binary process
+
+transition 
+// Necessary 
+transition-property : property name on which transition is to be applied
+transition-duration : (in s) time it will run
+transition-delay : (in s) time it will delay before starting
+
+animation : name duration timing-function delay iteration-count direction fill-mode
+// Necessary
+animation-name : is derived from @keyframes
+animation-duration : (in s or ms) time for which animation will run from 0% to 100%
+// Optional
+animation-timing-function : ease-in,ease-out,ease-in-out,cubic-bezier(),steps(),frames()
+
+animation-delay : (in s or ms) time it will delay before starting animation
+animation-iteration-count : infinite # of times animation will run
+animation-direction : reverse determines how animation goes 0% to 100% or 100% to 0%
+animation-fill-mode : backwards apply styles of 0% before animation start
+
+Sometimes animation is shaky
+set backface-visibility : hidden;
+
+Pseudo classes
+
+For any element
+:hover
+:first-child
+:last-child
+:nth-child()
+:nth-of-type()
+
+For a
+:link
+:active
+:visited
+
+Other inputs
+:focus
+:enabled
+:disabled
+:checked
+:empty
+:not()
+
+Pseudo elements
+
+::before
+::after
+::placeholder
+::first-letter
+::first-line
+::selection
+::grammar-error
+::spelling-error
+
+inline-block element are treated as text
+so to center it use text-align : center on parent
+
+block element can be centered by
+using margin : 0 auto also width must be defined
+as block element occupies all width available and inner element then
+can be center by text-align : center 
+
+box-shadow : x-offset y-offset blur spread color
+
+::after
+::before
+to actually appear on page use content and display 
+These elements are treated as child of element
+
+Also
+.element:hover::after is used instead of .element:hover .element::after
+as ::after is an pseudo element and it existence is questioned
+
+clearfix
+content : ''
+display : table
+
+Responsive Design
+Fluid layouts
+Media queries
+Responsive Images
+Correct units
+Desktop-first vs Mobile-first
+
+Maintainable and reuseable code
+Organise Files
+Classe Names
+Html Structure
+
+Web Performance
+Less http request
+Compress code
+Compress images
+Use css preprocessor
+
+DOM (Document Object Model)
+CSSOM (CSS Object Model)
+
+Render Tree - DOM + CSSOM
+Visual Formatting Model
+
+Cascade - Resolving Conflicting css declaration and then process final css value
+
+Declaration can be of author,user(default font size),browser
+Importance > Specificity > Souce Order
+
+Importance
+- User !important declarations - Highest Priority
+- Author !important declarations
+- Author declarations
+- User declarations
+- Browser declarations
+
+Specificity
+- Inline style
+- Ids
+- Classes,pseudo-classes,attribute
+- Elements,pseudo-elements
+
+Source Order
+- Last css declaration written in code
+
+Selector with 1 id is more specific as compared to many classes
+
+Rely more on specificy than source order
+3-parties stylesheet - Always put your author stylesheet as last
+
+* Universal Selector have no specificity value (0,0,0)
+
+
+Declared value (author declaration)
+Cascaded value (after the cascade)
+Specified value (defaulting,if there is no cascaded value) Initial value and Inherited value
+Computed value (relative value to absolute so that they can be displayed and inherited)
+Used value (final calculation,based upon layout) ex - percentage into pixels
+Actual value (browser and device restictions) ex - point pixels into whole pixels 
+
+root font size - Cascade value (16px - as css can come from different sources)
+Browsers specify default root font size (usually 16px)User agent defination 
+
+Text properties are actually inherited so we declare it on body and not on *
+
+Relative units
+Corret unit 
+- Don't use pixels
+-percentages
+-ems
+-rems Relative to root font size
+-vh
+-vw
+
+%(font) - Parent's font size
+%(length) - Parent's width 
+
+Font-Based
+
+em used parent or current element as reference
+rem used root font-size as reference
+em(font) - Parent's font size
+em(length) - Current's font size
+rem - Root's font size
+
+Viewport-Based
+vh - 1% of viewport height
+vw - 1% of viewport width
+
+Each property has initial value,used if nothing is declared or inherited
+Inherited value is computed value and not declared value
+Inheritance only work if neither user nor browser have declared value
+
+Inherit,Initial,Unset
+
+inherit keyword to force inheritance on certain property
+initial keyword to reset property to initial value
+
+unset keyword acts as either inherit or initial. It’ll act as inherit if the parent has a value that matches, or else it will act as initial
+A neat trick with unset is when combined with the all shorthand, which automatically affects all properties of a selector
+ie properties that are given to parent will be inherited else it will be initial value
+
+revert keyword rolls back the cascade so that a property takes on the value it would have had if there were no styles in the current style origin (author, user, or user-agent).
+Thus, it resets the property to the default value established by the user-agent stylesheet (or by user styles, if any exist)
+revert keyword is useful for isolating embedded widgets or components from the styles of the page that contains them,
+particularly when used with the all property.
+
+Every property has either inherit or initial value
+
+Properties related to text are inherited like font-size,font-weight,color not background color
+Other properties which are not inherited have initial value
+background-color initial value - transparent no inherit value
+padding,margin initial value - 0px no inherit value
+
+Cascade - Process of combining different stylesheets and resolving conflict between different css rules and declaration,
+when more than one rule is applied to element
+
+Visual Formating Model
+Algorithm that calculate boxes and determines layout of these boxes,
+for each element in render tree, in order to determine final layout
+
+Dimnesion of boxes - Box model
+Box type - inline,block and inline-block
+Positioning scheme - floats and positioning
+Stacking context - z-index
+Siblings and Parents
+Viewport size,Dimenshions of images
+
+
+## Box Model (box-sizing)
+-Content - Text and Images (height and width)
+-Padding - Area around content but still inside box (padding)
+-Border - Goes around padding and content (border)
+-Margin - Spaces between boxes ie outside of box (margin)
+-Fill Area - Content+Padding (background-image or background-color)
+
+box-sizing : border-box;
+height and width not only to content as above
+they will be extended to padding and border as well
+
+## Box Type (display)
+Inline,Block,Inline-Block
+
+Block-Level
+display : block (flex,list-item,table)
+Element formatted visual as blocks
+100% of parent's width
+Vertically,one after another (create line break)
+Box-Model is applied
+
+Inline-Block 
+display : inline-block
+No line break (inline and not in block)
+Occupies only content'space (inline and not in block)
+Box-model is applied (block and not in inline)
+
+
+Inline
+display : inline
+Content is distributed in lines
+Only's only 
+No line break
+No height and width
+Padding and Margin only horizontally (left and right)
+
+## Positioning Scheme
+
+Normal flow
+Default
+According to source order
+position : relative
+
+Floats
+Removed from normal flow
+Text and inline elements will wrap around the floated element
+Container will not adjust it height to the element (clearFix)
+float : left or right
+
+Absolute Positioning
+Removed from normal flow
+No impact on surrounding contents and elements
+Use top,left,bottom,right to offset element from it relative positioned parent
+Stacking context
+z-index comes into picture
+position : absolute or fixed
+
+## Stacking Context
+z-index
+opacity value different from one
+transform
+filter
+
+Clean
+Modular
+Reusable
+Ready for growth
+
+Architect Mindset
+
+Think 
+Think about layout of your webpage or web app before writing code
+Build
+Build your layout in html and css with consistent structure for naming classes
+Architect
+Create logical architect for your css files and folder
+
+Think
+Component driven design
+Modular building blocks that make up interface
+Held together by layout of page
+Re uasble across projects and between different projects
+Independent,allowing us to use it anywhere on page
+Atomic Design Philosphy - Brad's Frost 
+
+## Build
+Object oriented CSS -  OOCSS 
+Scalable and Modular Architecture CSS -  SMACSS 
+BEM
+BEM - Block Element Modifier
+  BLOCK - Standalone component that is meaningful on its own
+  ELEMENT - Part of block that have no standalone meaning
+  MODIFIER - A differnet version of block or element
+  .block{
+  }
+  .block__element{
+  }
+  .block__element--modifier{
+  }
+Follows principle of really low specificy (0,1,0) - only classes 
+
+## Architect
+Inverted Triangle CSS - ITCSS
+Scalable and Modular Architecture CSS  - SMACSS
+7 in 1 pattern
+7 different folders for partial scss and 1 main scss to import all other files into compiled css stylesheet
+base/ - Basic product defination
+components/ - One file for each component
+layout/ - Overall layout of project
+pages/ - Specific pages of project
+themes/ - Different visual themes
+abstracts/ - Don't output any css such as variables and mix-ins
+vendors/ - Third party css
+
+7 in 1 
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _mixins.scss       # Sass Mixins
+|
+|– vendors/
+|   |– _bootstrap.scss    # Bootstrap
+|
+|– base/
+|   |– _reset.scss        # Reset/normalize
+|   |– _typography.scss   # Typography rules
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|   |– _sidebar.scss      # Sidebar
+|   |– _forms.scss        # Forms
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _carousel.scss     # Carousel
+|   |– _cover.scss        # Cover
+|   |– _dropdown.scss     # Dropdown
+|
+|– pages/
+|   |– _home.scss         # Home specific styles
+|   |– _contact.scss      # Contact specific styles
+|
+|– themes/
+|   |– _theme.scss        # Default theme
+|   |– _admin.scss        # Admin theme
+|
+ – main.scss              # Main Sass input file
+
+base contains boilerplate used throughout an entire site. This includes project-wide typography styles, and stylesheets that universally reset or normalize default CSS.
+
+components are like "mini" layouts. Styles for small, reusable pieces of the site should reside here (think buttons, forms, profile pictures, etc.)
+
+layout contains styles for different aspects of the site's structural layout (think of areas like nav bars, headers, footers, etc.)
+
+pages is where page-specific styles reside. For instance, if a project contained several style rules that are only ever used on the "Contact Us" page
+
+abstracts (helper) includes things like global variables, functions, and mixins. No output
+
+themes is used whenever a site has multiple themes. For instance, the example project above includes both admin and default theme. such as admin,premium,,user,night-mode
+
+vendors contains any third-party stylesheets a project uses
+
+# Basic Rules
+Use variables for everything
+
+Don’t nest selectors when it’s not necessary
+
+Nesting can be done only while overriddening or 
+(0,1,0)
+.product {
+color:light-grey;
+}
+(0,2,0)
+.product.product-selected{
+color:grey;
+}
+
+Just write overridden code after in source code
+(0,1,0)
+.product {
+color:light-grey;
+}
+(0,1,0)
+.product-selected{
+color:grey;
+}
+
+.product .product-selected and .product.product-selected
+<element class="product">
+    <element class="product-selected">
+and 
+<element class="product product-selected">
+
+Main featues of Sass
+- Variables - for reusable values such as color,font-sizes,font-weights,margin,padding,spacing
+$ - similar to php
+- Nesting - to nest selector inside of one another 
+&
+- Operators - Mathematical operations right inside of css
+- Partials and Imports - to write css in different files and importing them all in one 
+@import
+- Mixins - to write reusable piece of code (kind of function)
+- Function - similar to mixins with difference that they produce value that can be used
+- Extends - to make different selectors inherit declarations that are common to all to them
+- Control Directive - for writing complex code using conditiional and loops 
+
+
+JS
+Model View Component (MVC)
+import * as searchView from './views/searchView'
+import Search from './models/Search'
+export default and named
+
+Node js
+var fs = require('fs');
+var http = require('http')
+
+Sass and Scss
+
+Sass(similar to python)
+.list
+  list-style:none
+  & li
+    display:inline-block
+
+Indentation sensitive
+No semi-colon
+No parenthesis
+
+Scss
+.list{
+  list-style:none;
+  & li{
+    display:inline-block;
   }
 }
 
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+Comment in scss can be done by // unlike in css
+
+clearfix 
+When all the child element is set to float we lose height of parent element
+To fix this problem clearfix is used
+It add pseudo element after collapsed element
+.clearfix::after{
+  content : "";
+  clear : both;
+  display : table;
 }
+To pseudo element actually display on page we need content property
+clear specifies on which sides of an element floating elements are not allowed to float
+
+Nesting is scss is done by 
+nav
+  li
+
+.btn
+  &:link
+  &:hover
+
+Color function
+darken(color,%value)
+lighten(color,%value)  
+
+New Css Properties
+complex gradient,shapes,clips,background-blending,image filters
+Css variables,truly responsive images
+
+Flexbox 
+
+*/
